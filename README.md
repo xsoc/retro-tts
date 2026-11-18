@@ -82,8 +82,6 @@ Web exports need a threads-enabled build for background rendering. Without threa
 
 ## Licence
 
-MIT, copyright (c) 2026 Shonagon Tech. See [LICENSE](LICENSE).
-
 The pronunciation dictionary (`addons/retro_tts/data/lexicon.txt`) is derived from the
 [CMU Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) and keeps its BSD licence
 (`addons/retro_tts/data/LICENSE-cmudict.txt`), which must ship with it.
