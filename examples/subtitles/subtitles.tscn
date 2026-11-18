@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://examples/subtitles/subtitles.gd" id="1_sub"]
+[ext_resource type="Script" path="res://addons/retro_tts/retro_tts.gd" id="2_tts"]
+[ext_resource type="Resource" path="res://addons/retro_tts/voices/narrator.tres" id="3_narr"]
+[ext_resource type="Resource" path="res://addons/retro_tts/voices/computer.tres" id="4_quote"]
+
+[node name="Subtitles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sub")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.105882, 0.117647, 0.180392, 1)
+
+[node name="Box" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -220.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Text" type="RichTextLabel" parent="Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 26
+text = "..."
+
+[node name="Hint" type="Label" parent="Box"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -34.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Enter: next"
+horizontal_alignment = 2
+
+[node name="RetroTTS" type="Node" parent="."]
+script = ExtResource("2_tts")
+voice = ExtResource("3_narr")
+quote_voice = ExtResource("4_quote")
